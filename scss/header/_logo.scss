@@ -1,0 +1,20 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+header > logo
+
+------------------------------
+*/
+
+.logo {
+  display: block;
+  z-index: 5;
+}
+
+.logo__image {
+  width: 100%;
+  max-width: 48px;
+  @include mq(md) {
+    max-width: 32px;
+  }
+}

@@ -1,0 +1,118 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+flow > flow
+
+------------------------------
+*/
+
+.flow {
+  margin-top: 144px;
+  @include mq(md) {
+    margin-top: 64px;
+  }
+}
+
+.flow__card .card__item:last-child {
+  border-left: 1px solid var(--accent-color);
+}
+
+.flow__card .card__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--sub-color);
+}
+
+.flow__card .card__title-main {
+  background-color: var(--accent-color);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.flow__card .card__title::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  border-top: 1px dotted #fff;
+  margin-right: -16px;
+  position: relative;
+  z-index: 10;
+}
+
+.flow__card .card__title-main::after {
+  display: none;
+}
+
+.flow__card .card__contents {
+  overflow: visible;
+}
+
+.flow__card .flow-arrow {
+  position: relative;
+  padding-left: 0;
+}
+
+.flow-arrow::before,
+.flow-arrow::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5px);
+  right: -26px;
+  width: 9px;
+  height: 1px;
+  border-radius: 9999px;
+  background-color: var(--main-color);
+  transform-origin: calc(100% - 0.5px) 50%;
+}
+
+.flow-arrow::before {
+  transform: rotate(45deg);
+}
+
+.flow-arrow::after {
+  transform: rotate(-45deg);
+}
+
+.arrow.-right::before {
+  transform: rotate(45deg);
+}
+
+.flow__title::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  width: 24px;
+  height: 1px;
+  border-top: 1px dotted var(--main-color);
+}
+
+.flow__title span::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  width: 4px;
+  height: 9px;
+  background-color: var(--main-color);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  transform: translateY(-50%);
+}
+
+.flow__title::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  border-top: 1px dotted var(--main-color);
+  margin-right: -16px;
+}
+
+.flow__card .card__title-main span {
+  background-color: var(--accent-color);
+}
+
+// .flow__card .card__title span {
+//   padding-left: 0;
+// }

@@ -1,0 +1,192 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+mentor > mentor
+
+------------------------------
+*/
+
+.mentor {
+  margin-top: 144px;
+  @include mq(md) {
+    margin-top: 80px;
+  }
+}
+
+.mentor .card {
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.mentor .card__item {
+  width: 50%;
+  max-width: 629px;
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    width: 100%;
+    max-width: 864px;
+  }
+}
+
+.mentor .card__item:nth-child(2) {
+  border-right: 1px solid var(--sub-color);
+}
+
+.card__item--border {
+  border-top: none;
+}
+
+.card__item--border:last-child {
+  border-left: 1px solid var(--sub-color);
+}
+
+.mentor .card__point p {
+  font-size: clamp(10px, 0.9722222222222222vw, 14px);
+  @include mq(md) {
+    font-size: 10px;
+  }
+}
+
+.card__contents-description {
+  min-height: 214px;
+}
+
+.mentor .card__title {
+  font-size: clamp(20px, 2.2222222222222223vw, 32px);
+  line-height: 1.625;
+  @include mq(md) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.mentor .card__image {
+  width: 100%;
+  max-width: 93px;
+  @include mq(md) {
+    max-width: 55px;
+  }
+}
+
+.mentor .card__contents {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.mentor .card__description {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include mq(md) {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+}
+
+.mentor .card__description--negi {
+  padding-bottom: 0;
+}
+
+// career
+.career {
+  padding-top: 32px;
+  padding-bottom: 56px;
+  border-top: 1px dashed var(--sub-color);
+  @include mq(md) {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+}
+
+.career__inner {
+  padding-left: clamp(20px, 2.7777777777777777vw, 40px);
+  padding-right: clamp(20px, 2.7777777777777777vw, 40px);
+  min-height: 194px;
+  @include mq(md) {
+    min-height: auto;
+  }
+}
+
+.career__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.career__item {
+  position: relative;
+  padding-left: clamp(8px, 1.6666666666666667vw, 24px);
+  font-size: clamp(13px, 1.1111111111111112vw, 16px);
+  line-height: 1.875;
+  @include mq(md) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+  @include mq(sm) {
+    font-size: 12px;
+  }
+}
+
+.career__item:nth-child(n + 2) {
+  margin-top: 12px;
+}
+
+/* 四角マーク */
+.career__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  transform: translateY(50%);
+  width: 8px;
+  height: 8px;
+  z-index: 5;
+  background-color: #d9d9d9;
+  @include mq(md) {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* 縦線 */
+.career__item::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 16px;
+  transform: translateX(-50%);
+  height: 120%;
+  width: 1px;
+  background-color: #ebebeb;
+  @include mq(md) {
+    top: 8px;
+    left: 2px;
+    height: 145%;
+  }
+}
+
+/* 最後の項目の縦線を非表示 */
+.career__item:last-child::after {
+  display: none;
+}
+
+.career__title {
+  font-size: clamp(16px, 1.3888888888888888vw, 20px);
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
+
+.card__x-image {
+  display: block;
+  width: 100%;
+  max-width: 24px;
+  margin-top: 16px;
+  margin-left: clamp(20px, 2.7778vw, 40px);
+  margin-bottom: 32px;
+  @include mq(md) {
+    margin-top: 20px;
+  }
+}

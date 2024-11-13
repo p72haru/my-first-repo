@@ -1,0 +1,23 @@
+@use "breakpoint" as *;
+
+/*!
+layout > arrow
+
+------------------------------
+*/
+
+.arrow {
+  background-image: url(../../img/intro-cta-arrow@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 19px;
+  margin-right: 28px;
+  margin-left: 28px;
+  @include mq(md) {
+    width: 20px;
+    height: 17px;
+    margin-right: 4.445%;
+    margin-left: 4.445%;
+  }
+}

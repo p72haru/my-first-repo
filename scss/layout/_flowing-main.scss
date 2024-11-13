@@ -1,0 +1,25 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > flowing-main
+
+------------------------------
+*/
+
+.flowing-main {
+  overflow: hidden;
+  display: flex;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+.flowing-main__text {
+  font-size: clamp(20px, 2.2222222222222223vw, 36px);
+  color: #333333;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: loop-slide 20s infinite linear;
+  @include mq(md) {
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,22 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+header > header
+
+------------------------------
+*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 32px;
+  @include mq(md) {
+    top: 16px;
+  }
+}
+
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+}

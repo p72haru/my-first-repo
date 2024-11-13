@@ -1,0 +1,78 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+intro > concerns
+
+------------------------------
+*/
+
+// Intro-Concerns
+
+.concerns {
+  display: flex;
+  margin-top: 48px;
+  @include mq(md) {
+    flex-direction: column;
+    margin-right: auto;
+    margin-top: 32px;
+  }
+}
+
+.concerns__image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 480px;
+  @include mq(md) {
+    min-width: 100%;
+    padding-right: 5.555555555555555vw;
+    padding-left: 5.555555555555555vw;
+  }
+}
+
+.concerns__image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  @include mq(md) {
+    max-width: 320px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.concerns__lists {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    gap: 0px;
+    margin-top: 0;
+    padding-left: 5.555555555555555vw;
+    padding-right: 3.3333333333333335vw;
+  }
+}
+.concerns__item {
+  width: fit-content;
+  color: var(--main-color);
+  font-size: clamp(16px, 1.6666666666666667vw, 24px);
+  background-color: #181818;
+  padding-top: clamp(2px, 0.2777777777777778vw, 4px);
+  padding-right: clamp(4px, 0.8333333333333334vw, 12px);
+  padding-left: clamp(4px, 0.8333333333333334vw, 12px);
+  padding-bottom: clamp(2px, 0.2777777777777778vw, 4px);
+  line-height: 1.4589;
+  margin-bottom: -1px;
+  @include mq(sm) {
+    font-size: clamp(14px, 1.6666666666666667vw, 20px);
+  }
+  @include mq(xl, min) {
+    border: 1px solid #181818;
+  }
+}
+
+.concerns__item:last-child {
+  margin-bottom: 0;
+}
+
+.concerns__item span {
+  display: inline;
+}

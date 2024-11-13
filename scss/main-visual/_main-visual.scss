@@ -1,0 +1,56 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+main-visual > main-visual
+
+------------------------------
+*/
+
+.main-visual {
+  color: var(--main-color);
+  background-image: url(../../img/main-visual.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 112px;
+  padding-bottom: 120px;
+  @include mq(md) {
+    padding-top: 120px;
+  }
+}
+
+.main-visual__contents {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(16px, 4.445%, 56px);
+  padding-right: clamp(30px, 8.335%, 103px);
+  @include mq(xl, min) {
+    padding-right: 0;
+  }
+  @include mq(md) {
+    max-width: 864px;
+  }
+}
+
+.main-visual__title {
+  font-size: clamp(72px, 20.55555vw, 296px);
+  line-height: 1;
+  @include mq(md) {
+    font-size: clamp(64px, 20vw, 168px);
+    line-height: 1;
+    margin-left: 0;
+  }
+}
+
+.main-visual__catchphrase {
+  font-size: clamp(16px, 2.2222222222222223vw, 36px);
+  margin-left: 2%;
+  @include mq(md) {
+    line-height: 1.625;
+    margin-top: 8px;
+    margin-left: 1.3888888888888888vw;
+  }
+  @include mq(sm) {
+    font-size: clamp(14px, 2.2222222222222223vw, 16px);
+  }
+}

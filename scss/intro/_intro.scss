@@ -1,0 +1,66 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+intro > intro
+
+------------------------------
+*/
+
+.intro__inner {
+  width: 100%;
+  margin-top: -88px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+  padding-left: clamp(20px, 5.556%, 80px);
+  padding-right: clamp(20px, 8.334%, 120px);
+  @include mq(md) {
+    margin-top: 13px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.flowing-main {
+  overflow: hidden;
+  display: flex;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+.flowing-main__text {
+  font-size: clamp(20px, 2.2222222222222223vw, 32px);
+  color: #333333;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: loop-slide 20s infinite linear;
+  @include mq(md) {
+    margin-top: 32px;
+  }
+}
+
+// Intro-Contents
+.intro__contents {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    // padding-right: 5.555555555555555vw;
+    // padding-left: clamp(20px, 5.556%, 80px);
+    max-width: 864px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.intro__question {
+  font-size: clamp(32px, 3.88889vw, 56px);
+  margin-top: 8px;
+  @include mq(xl) {
+    margin-right: auto;
+  }
+  @include mq(md) {
+    padding-right: 5.555555555555555vw;
+    padding-left: 5.555555555555555vw;
+  }
+}

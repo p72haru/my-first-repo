@@ -1,0 +1,47 @@
+@use "breakpoint" as *;
+
+/*!
+layout > animation
+
+------------------------------
+*/
+
+// animation
+
+// intro-flowing
+@keyframes MoveLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes MoveLeft2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+// furiaru-flowing
+@keyframes flowing {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
