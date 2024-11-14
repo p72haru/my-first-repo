@@ -1,0 +1,45 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > slider-nav
+
+------------------------------
+*/
+
+// slider-nav
+
+.slider-nav {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.slider-nav__button {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  background: var(--accent-color);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.slider-nav__button:disabled {
+  background: var(--accent-color);
+  opacity: 0.2;
+  cursor: default;
+}
+
+.slider-nav__arrow {
+  display: block;
+  width: 24px;
+  height: 19px;
+  margin: 0 auto;
+}
+
+.slider-nav__button--prev .slider-nav__arrow {
+  transform: rotate(-180deg);
+}

@@ -1,0 +1,59 @@
+@use "breakpoint" as *;
+
+/*!
+layout > decoration
+
+------------------------------
+*/
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.highlight--sub {
+  display: inline;
+  color: var(--main-color);
+  background-color: var(--accent-color);
+  width: fit-content;
+  font-weight: bold;
+}
+.highlight--main {
+  display: inline-block;
+  color: var(--sub-color);
+  background-color: var(--main-color);
+  width: fit-content;
+  padding-right: 8px;
+  padding-left: 8px;
+  @include mq(md) {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  @include mq(sm) {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}
+
+.line {
+  display: inline-block;
+  width: clamp(24px, 2.7777777777777777vw, 40px);
+  height: 1px;
+  background-color: #000000;
+  vertical-align: middle;
+  margin-right: 16px;
+  margin-left: 16px;
+  position: relative;
+  top: -0.1em;
+  @include mq(md) {
+    width: 6.666666666666667vw;
+  }
+}
+
+.double-quotation {
+  font-size: clamp(40px, 4.444444444444445vw, 64px);
+  color: #ebebeb;
+}

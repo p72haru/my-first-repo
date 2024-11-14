@@ -1,0 +1,74 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > vertical-dots 
+
+------------------------------
+*/
+
+
+
+.vertical-dots {
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: block;
+  position: relative;
+  width: 0.5555555555555556vw;
+  height: 40px;
+
+  @include mq(xl) {
+    margin-right: auto;
+  }
+
+  @include mq(md) {
+    width: 4px;
+    height: 20px;
+    padding-right: 5.555555555555555vw;
+    padding-left: clamp(20px, 5.556%, 80px);
+  }
+}
+
+.vertical-dots .vertical-dots__item,
+.vertical-dots .vertical-dots__item::before,
+.vertical-dots .vertical-dots__item::after {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ebebeb;
+
+  @include mq(md) {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+.vertical-dots .vertical-dots__item {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.vertical-dots .vertical-dots__item::before,
+.vertical-dots .vertical-dots__item::after {
+  content: "";
+}
+
+.vertical-dots .vertical-dots__item::before {
+  top: 15px;
+  @include mq(md) {
+    top: 8px;
+  }
+}
+
+.vertical-dots .vertical-dots__item::after {
+  bottom: 15px;
+
+  @include mq(md) {
+    bottom: 8px;
+  }
+}

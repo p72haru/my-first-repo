@@ -1,0 +1,46 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+feature > feature
+
+------------------------------
+*/
+
+// feature
+
+.feature {
+  margin-top: 148px;
+  @include mq(md) {
+    margin-top: 64px;
+  }
+}
+
+.feature .card__description {
+  @include mq(md) {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    min-width: 320px;
+    @include mq(sm) {
+      min-width: initial;
+    }
+  }
+}
+
+.feature .card__title-main {
+  @include mq(md) {
+    height: 29px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.feature card__title {
+  @include mq(md) {
+    height: 29px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.feature .card__title span + span {
+  padding-top: 1px;
+}

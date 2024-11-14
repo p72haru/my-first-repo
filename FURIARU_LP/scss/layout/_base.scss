@@ -1,0 +1,51 @@
+@use "breakpoint" as *;
+
+/*!
+layout > base
+
+------------------------------
+*/
+
+// all
+body {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--sub-color);
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+.pc-none {
+  @include mq(md, min) {
+    display: none;
+  }
+  @include mq(md) {
+    display: block;
+  }
+}
+.mb-none {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.xs-none {
+  @include mq(xs, min) {
+    display: none;
+  }
+}
+
+.br-span {
+  display: inline-block;
+  @include mq(md) {
+    display: inline;
+  }
+}

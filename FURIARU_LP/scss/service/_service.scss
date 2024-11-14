@@ -1,0 +1,97 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+service > service
+
+------------------------------
+*/
+
+.service {
+  position: relative;
+  background-image: url(../img/service-bg@2x.jpg);
+  background-size: cover;
+  color: var(--main-color);
+  margin-top: 120px;
+  overflow: hidden;
+  @include mq(md) {
+    margin-top: 80px;
+  }
+}
+
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--sub-color);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service__inner {
+  position: relative;
+  z-index: 5;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mq(md) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.service__contents {
+  font-size: clamp(16px, 2.2222222222222223vw, 32px);
+  line-height: 1.625;
+  @include mq(md) {
+    font-size: 20px;
+    line-height: 1.6;
+    padding-right: 2.7777777777777777vw;
+  }
+  @include mq(sm) {
+    font-size: 18px;
+  }
+}
+
+.service__list-container {
+  margin-top: 40px;
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.service__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  @include mq(md) {
+    margin-top: 4px;
+  }
+}
+
+.service__list li {
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: -1px;
+  @include mq(md) {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+}
+
+.service__text:nth-child(n + 2) {
+  margin-top: 40px;
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.service__list-container .service__text:last-child {
+  margin-top: 4px;
+}
+
+.service__list li:last-child {
+  margin-bottom: 0;
+}

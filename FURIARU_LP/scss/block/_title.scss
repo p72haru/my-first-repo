@@ -1,0 +1,45 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > title
+
+------------------------------
+*/
+
+.title__english {
+  color: var(--title-en);
+  font-size: clamp(12px, 1.1111111111111112vw, 16px);
+  margin-left: 8px;
+}
+
+.title__english--color {
+  color: #646464;
+  font-size: clamp(12px, 1.1111111111111112vw, 16px);
+}
+
+.title__english::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin-left: -8px;
+  margin-bottom: clamp(-8px, -1.07vh, -10px);
+}
+
+.title__text {
+  font-size: clamp(32px, 3.888888888888889vw, 56px);
+  font-weight: bold;
+  margin-top: 8px;
+  @include mq(md) {
+    margin-top: 4px;
+    font-size: 32px;
+  }
+  @include mq(sm) {
+    font-size: 30px;
+  }
+}
+
+.title__text--color {
+  color: var(--main-color);
+}

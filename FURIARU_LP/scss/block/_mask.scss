@@ -1,0 +1,19 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > mask
+
+------------------------------
+*/
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--sub-color);
+  opacity: 0.75;
+  display: none;
+  z-index: 5;
+}

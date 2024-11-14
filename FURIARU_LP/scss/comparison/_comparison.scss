@@ -1,0 +1,36 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+comparison > comparison
+
+------------------------------
+*/
+
+.comparison {
+  margin-top: 120px;
+  background-color: var(--bg-color);
+  @include mq(md) {
+    margin-top: 64px;
+  }
+}
+
+.comparison__inner {
+  padding-top: 148px;
+  padding-bottom: 128px;
+  @include mq(md) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-right: 0;
+  }
+}
+
+.comparison__contents {
+  margin-top: 49px;
+  display: flex;
+  gap:20px;
+  @include mq(xm) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,89 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+comparison > comparison-graph
+
+------------------------------
+*/
+
+//comparison-graph
+
+.comparison-graph {
+  width: 100%;
+  flex: 0;
+  margin-left: auto;
+  min-width: 433px;
+  @include mq(md) {
+    margin-top: 42px;
+    min-width: 320px;
+    margin-left: 0;
+    flex: 1;
+  }
+  @include mq(sm) {
+    min-width: 280px;
+  }
+}
+
+.comparison-graph__inner {
+  padding-left: 24px;
+  padding-top: 22px;
+  @include mq(md) {
+    max-width: 433px;
+    padding-left: 0;
+    padding-right: 20px;
+    padding-top: 0;
+  }
+}
+
+.comparison-graph__title {
+  font-size: clamp(20px, 1.6666666666666667vw, 24px);
+  line-height: 1.25;
+  text-align: center;
+  @include mq(md) {
+    line-height: 1.5;
+  }
+  @include mq(sm) {
+    font-size: 17px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .comparison-graph__title {
+    font-size: clamp(19px, 1.5833333333vw, 24px);
+  }
+}
+
+.comparison-graph__company {
+  margin-top: 16px;
+}
+
+.comparison-graph__company img {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 277px;
+  height: auto;
+  display: block;
+}
+
+.comparison-graph__chart {
+  margin: initial;
+  margin-top: 8px;
+}
+
+.comparison-graph__chart img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.comparison-graph__note {
+  font-size: clamp(14px, 1.1111111111111112vw, 16px);
+  line-height: 1.75;
+  text-align: center;
+  margin-top: 16px;
+  @include mq(md) {
+    font-size: 14px;
+    line-height: 1.714;
+    text-align: left;
+  }
+}

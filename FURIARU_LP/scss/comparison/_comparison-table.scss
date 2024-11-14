@@ -1,0 +1,178 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+comparison > comparison-table
+
+------------------------------
+*/
+
+.comparison__table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  padding-top: 20px;
+  flex: 1;
+  overflow-x: auto;
+  @include mq(md) {
+    flex: initial;
+  }
+}
+
+.comparison-table {
+  margin-bottom: 24px;
+  max-width: 765px;
+}
+
+.comparison__table::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  margin-right: 24px;
+  padding-right: 24px;
+}
+
+.comparison__table::-webkit-scrollbar-track {
+  background: #ebebeb;
+  margin-right: 20px;
+}
+
+.comparison__table::-webkit-scrollbar-thumb {
+  background: var(--sub-color);
+}
+
+/* Firefoxのみに適用 */
+@-moz-document url-prefix() {
+  .comparison__table {
+    scrollbar-color: var(--sub-color) #ebebeb !important;
+  }
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ebebeb;
+
+  text-align: center;
+  min-width: 153px;
+  line-height: 1.875;
+}
+
+.comparison-table td {
+  height: 80px;
+  min-height: 80px;
+  padding: 12px;
+}
+
+.comparison-table th {
+  color: var(--main-color);
+  height: 54px;
+}
+
+.comparison-table th span {
+  padding: 4px;
+}
+
+.comparison-table th .comparison-table__furiaru-header--main {
+  display: block;
+  margin-top: -16px;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  border-right: none;
+  font-size: 14px;
+  line-height: 2.143;
+  font-weight: bold;
+}
+
+/* Header styles */
+.comparison-table tr:first-child th:first-child {
+  border: none;
+  background: none;
+}
+
+.comparison-table__furiaru-header {
+  background: var(--accent-color);
+  color: white;
+  padding-top: 0;
+  font-size: 24px;
+  border: 1px solid var(--accent-color) !important;
+  position: relative;
+}
+
+.comparison-table__furiaru-header::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: -1px;
+  right: -1px;
+  background: var(--accent-color);
+  height: 20px;
+  @include mq(xl, min) {
+    right: 0;
+    top: -19px;
+  }
+}
+
+.company-a {
+  background: #cbcbcb;
+}
+
+.company-b {
+  background: #6a6a6a;
+  color: white;
+}
+
+.company-c {
+  background: var(--sub-color);
+  color: white;
+}
+
+/* FURIARU column styles */
+.comparison-table .comparison-table__furiaru-column {
+  border: none;
+  position: relative;
+  border: 1px solid #ebebeb;
+  font-weight: bold;
+}
+
+.comparison-table .comparison-table__furiaru-column::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border-top: 1px solid #ebebeb;
+  border-left: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.comparison-table__furiaru-column .comparison-table__price-note {
+  font-size: 16px;
+  line-height: normal;
+}
+
+tr:last-child .comparison-table__furiaru-column {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.comparison-table .comparison-table__furiaru-column--height {
+  line-height: 1.429;
+  font-size: 14px;
+}
+
+
+
+.comparison-table__price-note,
+.comparison-table__price--small {
+  font-size: 12px;
+}
+
+
+.circle::after {
+  content: "○";
+}
+
+.cross::before {
+  content: "×";
+}

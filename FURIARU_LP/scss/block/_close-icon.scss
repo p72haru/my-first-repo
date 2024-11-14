@@ -1,0 +1,44 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > close-icon
+
+------------------------------
+*/
+
+.close-icon__wrap {
+  display: none;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.close-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-color);
+  position: relative;
+  cursor: pointer;
+}
+
+.close-icon::before,
+.close-icon::after {
+  content: "";
+  position: absolute;
+  width: 10.32px;
+  height: 1px;
+  background-color: var(--main-color);
+  top: 48%;
+  right: 37%;
+}
+
+.close-icon::before {
+  transform: rotate(45deg);
+}
+
+.close-icon::after {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,15 @@
+@use "breakpoint" as *;
+
+/*!
+layout > base
+
+------------------------------
+*/
+
+// font
+:root {
+  --nunito: "Nunito Sans", sans-serif;
+}
+.nunito {
+  font-family: var(--nunito);
+}

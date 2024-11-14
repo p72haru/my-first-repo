@@ -1,0 +1,30 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+layout > swiper
+
+------------------------------
+*/
+
+// swiper
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-slide {
+  border: 1px solid var(--main-color);
+}
+
+.swiper-slide:nth-child(n + 2) {
+  border-left: none;
+  @include mq(md) {
+    border-left: 1px solid var(--main-color);
+  }
+}

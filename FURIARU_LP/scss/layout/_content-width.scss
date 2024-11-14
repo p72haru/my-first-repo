@@ -1,0 +1,28 @@
+@use "breakpoint" as *;
+
+/*!
+layout > content-width
+------------------------------
+*/
+
+
+// contents-width
+:root {
+  --max-width: 1480px;
+  --content-width: 1440x;
+  --width-content-m: 1080px;
+  --width-content-l: 1200px;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(20px, 5.556%, 80px);
+  padding-right: clamp(20px, 7.084%, 102px);
+  @include mq(md) {
+    max-width: 875px;
+    padding-left: 5.555555555555555vw;
+    padding-right: 5.555555555555555vw;
+  }
+}
