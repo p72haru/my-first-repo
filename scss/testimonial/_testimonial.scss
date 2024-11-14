@@ -11,13 +11,13 @@ testimonial > testimonial
 .testimonial {
   overflow: hidden;
   margin-top: 0;
-  background-image: url(../../img/main-visual.jpg);
+  background-image: url(../img/main-visual.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--main-color);
   position: relative;
   @include mq(md) {
-    background-image: url(../../img/testimonial-bg.jpg);
+    background-image: url(../img/testimonial-bg.jpg);
   }
 }
 

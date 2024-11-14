@@ -44,8 +44,6 @@ intro > intro
   display: flex;
   flex-direction: column;
   @include mq(md) {
-    // padding-right: 5.555555555555555vw;
-    // padding-left: clamp(20px, 5.556%, 80px);
     max-width: 864px;
     align-items: center;
     margin-right: auto;

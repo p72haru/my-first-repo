@@ -1,0 +1,16 @@
+@use "breakpoint" as *;
+
+/*!
+layout > base
+
+------------------------------
+*/
+
+// color
+:root {
+  --main-color: #ffffff;
+  --sub-color: #181818;
+  --accent-color: #ff3c07;
+  --bg-color: #fafafa;
+  --title-en: #bababa;
+}

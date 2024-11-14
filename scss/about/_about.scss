@@ -11,7 +11,7 @@ about > about
 .about {
   overflow: hidden;
   margin-top: 76px;
-  background-image: url(../../img/main-visual.jpg);
+  background-image: url(../img/main-visual.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--main-color);
@@ -48,7 +48,7 @@ about > about
   }
 }
 
-.about__catchphrase .highlight--main{
+.about__catchphrase .highlight--main {
   @include mq(md) {
     height: 29px;
   }
@@ -57,11 +57,11 @@ about > about
 .about__catchphrase .highlight--sub {
   padding-left: clamp(4px, 0.5555555555555556vw, 8px);
   @include mq(md) {
-   height: 29px;
+    height: 29px;
   }
 }
 
-.about__catchphrase span{
+.about__catchphrase span {
   margin-left: -10px;
 }
 

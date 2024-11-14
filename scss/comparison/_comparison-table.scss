@@ -128,7 +128,7 @@ comparison > comparison-table
 
 /* FURIARU column styles */
 .comparison-table .comparison-table__furiaru-column {
-  border: none; /* Remove default border */
+  border: none;
   position: relative;
   border: 1px solid #ebebeb;
   font-weight: bold;
@@ -161,14 +161,14 @@ tr:last-child .comparison-table__furiaru-column {
   font-size: 14px;
 }
 
-/* comparison-table__styles */
+
 
 .comparison-table__price-note,
 .comparison-table__price--small {
   font-size: 12px;
 }
 
-/* Circle and Cross */
+
 .circle::after {
   content: "○";
 }

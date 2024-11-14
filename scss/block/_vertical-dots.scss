@@ -1,10 +1,12 @@
 @use "../layout/breakpoint" as *;
 
 /*!
-intro > decoration
+layout > vertical-dots 
 
 ------------------------------
 */
+
+
 
 .vertical-dots {
   cursor: pointer;
@@ -68,34 +70,5 @@ intro > decoration
 
   @include mq(md) {
     bottom: 8px;
-  }
-}
-
-.intro__concerns + .vertical-dots {
-  margin-top: 32px;
-  @include mq(xl) {
-    margin-right: auto;
-  }
-  @include mq(md) {
-    margin-top: 24px;
-  }
-}
-
-.double-quotation {
-  font-size: clamp(40px, 4.444444444444445vw, 64px);
-  color: #ebebeb;
-}
-.line {
-  display: inline-block;
-  width: clamp(24px, 2.7777777777777777vw, 40px);
-  height: 1px;
-  background-color: #000000;
-  vertical-align: middle;
-  margin-right: 16px;
-  margin-left: 16px;
-  position: relative;
-  top: -0.1em;
-  @include mq(md) {
-    width: 6.666666666666667vw;
   }
 }
