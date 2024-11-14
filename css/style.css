@@ -1932,7 +1932,6 @@ course > course
 
 .course__sales-note-wrap {
   display: flex;
-  align-items: center;
   font-size: clamp(14px, 1.1111111111vw, 16px);
   border-top: 1px dashed var(--sub-color);
   margin-top: 40px;
@@ -1946,6 +1945,10 @@ course > course
     align-items: baseline;
     gap: 2px;
   }
+}
+
+.course__sales-note-wrap span {
+  padding-top: 2px;
 }
 
 .course__sales-note {
