@@ -10,20 +10,28 @@ comparison > comparison-graph
 
 .comparison-graph {
   width: 100%;
-  @include mq(xm) {
-    padding-right: 5.5555555556vw;
-    margin-top: 64px;
+  flex: 0;
+  margin-left: auto;
+  min-width: 433px;
+  @include mq(md) {
+    margin-top: 42px;
+    min-width: 320px;
+    margin-left: 0;
+    flex: 1;
+  }
+  @include mq(sm) {
+    min-width: 280px;
   }
 }
 
 .comparison-graph__inner {
-  max-width: 433px;
-  margin-left: auto;
-  padding-left: 20px;
-  @include mq(xm) {
-    margin-right: auto;
-    margin-left: initial;
+  padding-left: 24px;
+  padding-top: 22px;
+  @include mq(md) {
+    max-width: 433px;
     padding-left: 0;
+    padding-right: 20px;
+    padding-top: 0;
   }
 }
 

@@ -1,0 +1,127 @@
+@use "breakpoint" as *;
+
+/*!
+layout > cta
+
+------------------------------
+*/
+
+// Intro-CTA
+
+.cta-small {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  @include mq(md) {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.cta-small__link {
+  background-color: var(--accent-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 360px;
+  max-height: 215px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  z-index: 5;
+  @include mq(md) {
+    max-width: 100%;
+    max-height: 203px;
+    margin-left: auto;
+  }
+}
+
+.cta-small__contents {
+  flex-grow: 1;
+  position: relative;
+  padding-right: 60px;
+  padding-left: 60px;
+  max-width: 280px;
+
+  @include mq(md) {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  @include mq(xl, min) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.cta-small__contents::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  height: 250px;
+  width: 1px;
+  background: linear-gradient(to bottom, white 50%, transparent 50%);
+  background-size: 2px 8px;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.cta-small__remaining {
+  font-size: 13px;
+  position: relative;
+  line-height: 1.45;
+  max-width: 160px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 4px;
+  @include mq(md) {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2px;
+  }
+}
+.cta-small__remaining ::before {
+  content: "";
+  position: absolute;
+  top: clamp(2px, 0.6944444444444444vw, 10px);
+  top: 10px;
+  left: -4px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--main-color);
+
+  @include mq(md) {
+    left: -8px;
+  }
+}
+.cta-small__remaining  span {
+  font-size: 20px;
+}
+.cta-small__application {
+  font-size: 20px;
+  line-height: 1.45;
+  margin-top: 8px;
+  min-width: 200px;
+  @include mq(md) {
+    margin-top: 4px;
+  }
+}
+
+.cta-small__image-wrap {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+  @include mq(md) {
+    margin-top: 8px;
+  }
+}
+.cta-small__image {
+  width: 100%;
+  max-width: 48px;
+  margin-right: -10px;
+  background-size: cover;
+  background-position: center;
+}

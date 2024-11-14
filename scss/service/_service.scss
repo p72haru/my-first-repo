@@ -12,6 +12,7 @@ service > service
   background-size: cover;
   color: var(--main-color);
   margin-top: 120px;
+  overflow: hidden;
   @include mq(md) {
     margin-top: 80px;
   }
@@ -55,7 +56,10 @@ service > service
 }
 
 .service__list-container {
-  margin-top: 24px;
+  margin-top: 40px;
+  @include mq(md) {
+    margin-top: 24px;
+  }
 }
 
 .service__list {

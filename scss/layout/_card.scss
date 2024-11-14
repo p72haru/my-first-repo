@@ -86,20 +86,17 @@ layout > card
   width: 100%;
   max-width: 104px;
   z-index: -1;
+  @include mq(md) {
+    max-width: 80px;
+  }
 }
 
 .card__title span {
   display: block;
   background-color: var(--sub-color);
   padding-left: clamp(20px, 2.7778vw, 40px);
-  padding-top: 4px;
-  padding-bottom: 4px;
   @include mq(xx, min) {
     margin-bottom: -1px;
-  }
-  @include mq(md) {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 .card__title span + span {

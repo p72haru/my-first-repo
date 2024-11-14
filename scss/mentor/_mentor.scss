@@ -81,6 +81,7 @@ mentor > mentor
   @include mq(md) {
     padding-top: 16px;
     padding-bottom: 24px;
+    min-width: 320px;
   }
 }
 

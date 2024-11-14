@@ -9,8 +9,8 @@ header > header
 .header {
   position: fixed;
   width: 100%;
-  z-index: 10;
   top: 32px;
+  z-index: 10;
   @include mq(md) {
     top: 16px;
   }

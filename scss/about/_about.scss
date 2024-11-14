@@ -48,12 +48,21 @@ about > about
   }
 }
 
-.about__catchphrase .highlight__white {
-  padding-right: clamp(4px, 0.5555555555555556vw, 8px);
-  padding-left: clamp(4px, 0.5555555555555556vw, 8px);
+.about__catchphrase .highlight--main{
+  @include mq(md) {
+    height: 29px;
+  }
 }
-.about__catchphrase .highlight__red {
+
+.about__catchphrase .highlight--sub {
   padding-left: clamp(4px, 0.5555555555555556vw, 8px);
+  @include mq(md) {
+   height: 29px;
+  }
+}
+
+.about__catchphrase span{
+  margin-left: -10px;
 }
 
 .about__text--bold {

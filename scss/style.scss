@@ -4,11 +4,13 @@
 @use "layout/card";
 @use "layout/animation";
 @use "layout/arrow";
-@use "layout/cta";
+@use "layout/cta-small";
 @use "layout/flowing-main";
 @use "layout/cta-long";
 @use "layout/slider-nav";
 @use "layout/swiper";
+@use "layout/close-icon";
+@use "layout/mask";
 @use "header/header";
 @use "header/hamburger";
 @use "intro/intro";
@@ -30,4 +32,6 @@
 @use "testimonial/testimonial";
 @use "testimonial/voices";
 @use "flow/flow";
+@use "cta/cta";
+@use "faq/faq";
 @use "footer/footer";

@@ -7,5 +7,45 @@ footer > footer
 */
 
 .footer {
-  margin-top: 120px;
+  margin-top: 160px;
+  padding-top: 80px;
+  padding-bottom: 64px;
+  color: var(--main-color);
+  background-image: url(../../img/main-visual.jpg);
+  background-size: cover;
+  @include mq(md) {
+    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 16px;
+  }
+}
+
+.footer__inner {
+  padding-left: clamp(16px, 4.445%, 56px);
+  padding-right: clamp(30px, 8.335%, 103px);
+  @include mq(md) {
+    padding-left: 4.444444444444445vw;
+    padding-right: 8.88888888888889vw;
+  }
+}
+
+.footer__logo {
+  font-size: clamp(72px, 20.55555vw, 296px);
+  line-height: 1;
+  margin-bottom: -34px;
+  margin-top: -8px;
+  @include mq(md) {
+    font-size: clamp(64px, 20vw, 168px);
+    margin-bottom: -8px;
+    margin-top: -6px;
+  }
+}
+
+.copy {
+  font-size: 12px;
+  margin-left: clamp(24px, 1.6666666666666667vw, 24px);
+  @include mq(md) {
+    font-size: 10px;
+    margin-left: 1.1111111111111112vw;
+  }
 }

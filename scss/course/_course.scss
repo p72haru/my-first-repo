@@ -6,6 +6,13 @@ course > course
 ------------------------------
 */
 
+.course{
+  margin-top: 48px;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
 .course__plan {
   margin-top: 48px;
   @include mq(md) {
@@ -203,7 +210,7 @@ course > course
   border-top: 1px dashed var(--sub-color);
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-top: 40px;
+  margin-top: 34px;
   padding-left: clamp(20px, 2.7777777777777777vw, 40px);
   @include mq(md) {
     font-size: 14px;
@@ -221,7 +228,11 @@ course > course
   height: 4px;
   background-color: var(--accent-color);
   margin-left: -8px;
-  margin-bottom: -10px;
+  margin-bottom: -4px;
+  @include mq(md) {
+    margin-left: -8px;
+    margin-bottom: -8px;
+  }
 }
 
 // sales
@@ -231,7 +242,7 @@ course > course
 }
 
 .course-description__list--sales {
-  max-width: 634px;
+  max-width: 648px;
   font-size: clamp(10px, 1.1111111111vw, 16px);
   line-height: 1.875;
   @include mq(md) {

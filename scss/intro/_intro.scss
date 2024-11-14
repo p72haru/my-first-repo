@@ -15,7 +15,7 @@ intro > intro
   padding-left: clamp(20px, 5.556%, 80px);
   padding-right: clamp(20px, 8.334%, 120px);
   @include mq(md) {
-    margin-top: 13px;
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -62,5 +62,6 @@ intro > intro
   @include mq(md) {
     padding-right: 5.555555555555555vw;
     padding-left: 5.555555555555555vw;
+    line-height: 1.375;
   }
 }

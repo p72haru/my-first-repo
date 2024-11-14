@@ -97,7 +97,7 @@ main {
   padding-left: clamp(20px, 5.556%, 80px);
   padding-right: clamp(20px, 7.084%, 102px);
   @include mq(md) {
-    max-width: 864px;
+    max-width: 875px;
     padding-left: 5.555555555555555vw;
     padding-right: 5.555555555555555vw;
   }
