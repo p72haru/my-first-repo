@@ -23,7 +23,7 @@ flow > flow
 .flow__card .card__item {
   min-height: 315px;
   @include mq(md) {
-    min-height: 230px;
+    min-height: initial;
   }
 }
 
@@ -180,6 +180,7 @@ flow > flow
 
 .flow__card .card__title span {
   margin-bottom: 0;
+  background-color: initial;
 }
 
 .flow__card .card__title span + span {

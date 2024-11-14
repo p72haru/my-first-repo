@@ -370,8 +370,6 @@ layout > card
 .card__title-main {
   padding-left: clamp(20px, 2.7778vw, 40px);
   background-color: var(--accent-color);
-  padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .card__description {
@@ -2889,7 +2887,7 @@ flow > flow
 }
 @media screen and (max-width: 960px) {
   .flow__card .card__item {
-    min-height: 230px;
+    min-height: initial;
   }
 }
 
@@ -3055,6 +3053,7 @@ flow > flow
 
 .flow__card .card__title span {
   margin-bottom: 0;
+  background-color: initial;
 }
 
 .flow__card .card__title span + span {
@@ -3258,7 +3257,7 @@ cta > cta
 
 .cta__spir {
   width: clamp(40.9027777778vw, 40.9027777778vw, 589px);
-  height: clamp(40.9027777778vw, 47.2222222222vw, 680px);
+  height: clamp(56vw, 47.2222222222vw, 680px);
   max-width: 589px;
   max-height: 680px;
   background-color: #d9d9d9;
