@@ -45,3 +45,7 @@ layout > animation
     transform: translateX(-100%);
   }
 }
+
+:root {
+  --transition: all 0.4s;
+}
