@@ -24,7 +24,7 @@ layout > slider-nav
   border: none;
   background: var(--accent-color);
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: var(--transition);
 }
 
 .slider-nav__button:disabled {
@@ -32,6 +32,14 @@ layout > slider-nav
   opacity: 0.2;
   cursor: default;
 }
+
+
+@media (any-hover: hover) {
+  .slider-nav__button:not([disabled]):hover {
+    scale: 1.1;
+  }
+}
+
 
 .slider-nav__arrow {
   display: block;

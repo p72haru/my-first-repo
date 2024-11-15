@@ -11,9 +11,16 @@ header > logo
   z-index: 10;
 }
 
+@media (any-hover: hover) {
+  .logo:hover .logo__image {
+    opacity: 0.7;
+  }
+}
+
 .logo__image {
   width: 100%;
   max-width: 48px;
+  transition: var(--transition);
   @include mq(xs) {
     position: fixed;
   }

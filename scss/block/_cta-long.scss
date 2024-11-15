@@ -15,6 +15,13 @@ layout > cta-long-long
   background-color: var(--accent-color);
   position: relative;
   z-index: 5;
+  justify-content: center;
+}
+
+.cta-long__link-wrap {
+  width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 .cta-long__link {
@@ -26,6 +33,12 @@ layout > cta-long-long
   margin-right: auto;
   margin-left: auto;
   z-index: 5;
+}
+
+@media (any-hover: hover) {
+  .cta-long__link-wrap:hover .cta-long__arrow {
+    scale: 1.1;
+  }
 }
 
 .cta-long__contents-inner {
@@ -45,8 +58,8 @@ layout > cta-long-long
     align-items: center;
   }
   @include mq(sm) {
-   padding-left: 16px;
-   padding-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -129,6 +142,7 @@ layout > cta-long-long
   height: clamp(17px, 4.444444444444445vw, 64px);
   margin-right: clamp(16px, 5.555555555555555vw, 80px);
   margin-left: clamp(16px, 5.555555555555555vw, 80px);
+  transition: var(--transition);
   @include mq(md) {
     background-image: url(../img/intro-cta-arrow@2x.png);
     margin-right: clamp(14px, 4.444444444444445vw, 16px);

@@ -36,6 +36,16 @@ layout > cta
   }
 }
 
+@media (any-hover: hover) {
+  .cta-small__link:hover .cta__arrow {
+    scale: 1.2;
+  }
+}
+
+.cta__arrow {
+  transition: var(--transition);
+}
+
 .cta-small__contents {
   flex-grow: 1;
   position: relative;
@@ -97,7 +107,7 @@ layout > cta
     left: -8px;
   }
 }
-.cta-small__remaining  span {
+.cta-small__remaining span {
   font-size: 20px;
 }
 .cta-small__application {

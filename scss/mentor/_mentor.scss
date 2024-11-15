@@ -186,7 +186,14 @@ mentor > mentor
   margin-top: 16px;
   margin-left: clamp(20px, 2.7778vw, 40px);
   margin-bottom: 32px;
+  transition: var(--transition);
   @include mq(md) {
     margin-top: 20px;
+  }
+}
+
+@media (any-hover: hover) {
+  .card__x-image:hover {
+    opacity: 0.7;
   }
 }
