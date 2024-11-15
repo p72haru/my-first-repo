@@ -154,6 +154,10 @@ layout > animation
     transform: translateX(-100%);
   }
 }
+:root {
+  --transition: all 0.4s;
+}
+
 /*!
 layout > content-width
 ------------------------------
@@ -440,6 +444,13 @@ layout > cta-long-long
   background-color: var(--accent-color);
   position: relative;
   z-index: 5;
+  justify-content: center;
+}
+
+.cta-long__link-wrap {
+  width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 .cta-long__link {
@@ -453,6 +464,11 @@ layout > cta-long-long
   z-index: 5;
 }
 
+@media (any-hover: hover) {
+  .cta-long__link-wrap:hover .cta-long__arrow {
+    scale: 1.1;
+  }
+}
 .cta-long__contents-inner {
   flex-grow: 1;
   position: relative;
@@ -571,6 +587,7 @@ layout > cta-long-long
   height: clamp(17px, 4.4444444444vw, 64px);
   margin-right: clamp(16px, 5.5555555556vw, 80px);
   margin-left: clamp(16px, 5.5555555556vw, 80px);
+  transition: var(--transition);
 }
 @media screen and (max-width: 960px) {
   .cta-long__arrow {
@@ -617,6 +634,15 @@ layout > cta
     max-height: 203px;
     margin-left: auto;
   }
+}
+
+@media (any-hover: hover) {
+  .cta-small__link:hover .cta__arrow {
+    scale: 1.2;
+  }
+}
+.cta__arrow {
+  transition: var(--transition);
 }
 
 .cta-small__contents {
@@ -823,7 +849,7 @@ layout > slider-nav
   border: none;
   background: var(--accent-color);
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: var(--transition);
 }
 
 .slider-nav__button:disabled {
@@ -832,6 +858,11 @@ layout > slider-nav
   cursor: default;
 }
 
+@media (any-hover: hover) {
+  .slider-nav__button:not([disabled]):hover {
+    scale: 1.1;
+  }
+}
 .slider-nav__arrow {
   display: block;
   width: 24px;
@@ -1337,9 +1368,15 @@ header > logo
   z-index: 10;
 }
 
+@media (any-hover: hover) {
+  .logo:hover .logo__image {
+    opacity: 0.7;
+  }
+}
 .logo__image {
   width: 100%;
   max-width: 48px;
+  transition: var(--transition);
 }
 @media screen and (max-width: 1200px) {
   .logo__image {
@@ -1399,6 +1436,7 @@ header > nav
   background-color: #333333;
   padding: 4px 8px;
   color: var(--main-color);
+  transition: var(--transition);
 }
 @media screen and (max-width: 1200px) {
   .nav__link {
@@ -1411,11 +1449,21 @@ header > nav
   }
 }
 
+@media (any-hover: hover) {
+  .nav__link:hover {
+    background-color: var(--accent-color);
+  }
+}
 .nav__apply {
   background-color: var(--accent-color);
   cursor: pointer;
 }
 
+@media (any-hover: hover) {
+  .nav__apply:hover {
+    opacity: 0.7;
+  }
+}
 /*!
 about > about
 
@@ -2287,6 +2335,7 @@ mentor > mentor
   margin-top: 16px;
   margin-left: clamp(20px, 2.7778vw, 40px);
   margin-bottom: 32px;
+  transition: var(--transition);
 }
 @media screen and (max-width: 960px) {
   .card__x-image {
@@ -2294,6 +2343,11 @@ mentor > mentor
   }
 }
 
+@media (any-hover: hover) {
+  .card__x-image:hover {
+    opacity: 0.7;
+  }
+}
 /*!
 comparison > comparison
 
