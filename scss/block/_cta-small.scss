@@ -102,6 +102,7 @@ layout > cta
   width: 4px;
   height: 4px;
   background-color: var(--main-color);
+  animation: blinking 1s ease-in-out infinite alternate;
 
   @include mq(md) {
     left: -8px;

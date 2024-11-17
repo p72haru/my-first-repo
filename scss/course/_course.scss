@@ -229,6 +229,7 @@ course > course
   background-color: var(--accent-color);
   margin-left: -8px;
   margin-bottom: -4px;
+  animation: blinking 1s ease-in-out infinite alternate;
   @include mq(md) {
     margin-left: -8px;
     margin-bottom: -8px;

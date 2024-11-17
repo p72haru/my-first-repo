@@ -137,6 +137,7 @@ cta > cta
   width: clamp(4px, 0.4166666666666667vw, 6px);
   height: clamp(4px, 0.4166666666666667vw, 6px);
   background-color: var(--main-color);
+  animation: blinking 1s ease-in-out infinite alternate;
   @include mq(md) {
     top: 10px;
     left: -8px;

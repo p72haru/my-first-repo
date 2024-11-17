@@ -94,6 +94,7 @@ layout > cta-long-long
   width: clamp(4px, 0.5555555555555556vw, 8px);
   height: clamp(4px, 0.5555555555555556vw, 8px);
   background-color: var(--main-color);
+  animation: blinking 1s ease-in-out infinite alternate;
   @include mq(md) {
     left: -8px;
   }

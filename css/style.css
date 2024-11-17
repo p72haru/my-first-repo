@@ -154,6 +154,18 @@ layout > animation
     transform: translateX(-100%);
   }
 }
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blink {
+  animation: blinking 1s ease-in-out infinite alternate;
+}
+
 :root {
   --transition: all 0.4s;
 }
@@ -529,6 +541,7 @@ layout > cta-long-long
   width: clamp(4px, 0.5555555556vw, 8px);
   height: clamp(4px, 0.5555555556vw, 8px);
   background-color: var(--main-color);
+  animation: blinking 1s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 960px) {
   .cta-long__remaining::before {
@@ -707,6 +720,7 @@ layout > cta
   width: 4px;
   height: 4px;
   background-color: var(--main-color);
+  animation: blinking 1s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 960px) {
   .cta-small__remaining ::before {
@@ -1950,6 +1964,7 @@ course > course
   background-color: var(--accent-color);
   margin-left: -8px;
   margin-bottom: -4px;
+  animation: blinking 1s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 960px) {
   .course__learning-note::before {
@@ -3280,6 +3295,7 @@ cta > cta
   width: clamp(4px, 0.4166666667vw, 6px);
   height: clamp(4px, 0.4166666667vw, 6px);
   background-color: var(--main-color);
+  animation: blinking 1s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 960px) {
   .cta__remaining::before {
