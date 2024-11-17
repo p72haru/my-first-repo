@@ -52,7 +52,6 @@ layout > cta
   padding-right: 60px;
   padding-left: 60px;
   max-width: 280px;
-
   @include mq(md) {
     max-width: 100%;
     padding-right: 0;
@@ -85,7 +84,7 @@ layout > cta
   max-width: 160px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 4px;
+  padding-left: 8px;
   @include mq(md) {
     width: fit-content;
     margin-right: auto;
@@ -98,7 +97,7 @@ layout > cta
   position: absolute;
   top: clamp(2px, 0.6944444444444444vw, 10px);
   top: 10px;
-  left: -4px;
+  left: 0px;
   width: 4px;
   height: 4px;
   background-color: var(--main-color);
@@ -125,6 +124,7 @@ layout > cta
   display: flex;
   margin-top: 16px;
   justify-content: center;
+  margin-right: 18px;
   @include mq(md) {
     margin-top: 8px;
   }

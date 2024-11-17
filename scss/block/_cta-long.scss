@@ -105,6 +105,7 @@ layout > cta-long-long
   padding-left: 12px;
   @include mq(md) {
     font-size: 13px;
+    padding-left: 0;
   }
 }
 
@@ -121,12 +122,21 @@ layout > cta-long-long
   text-wrap: nowrap;
   @include mq(md) {
     font-size: 20px;
+    margin-top: 4px;
   }
 }
 
 .cta-long__image-wrap {
   display: flex;
 }
+
+.cta-long .cta__image-wrap--pc {
+  margin-left: 0;
+}
+.cta-long .cta__image-wrap--mb {
+  margin-right: 16px;
+}
+
 .cta-long__image {
   width: 100%;
   max-width: 48px;
