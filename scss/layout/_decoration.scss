@@ -15,7 +15,7 @@ layout > decoration
 }
 
 .highlight--sub {
-  display: inline;
+  display: inline-block;
   color: var(--main-color);
   background-color: var(--accent-color);
   width: fit-content;
@@ -47,7 +47,7 @@ layout > decoration
   margin-right: 16px;
   margin-left: 16px;
   position: relative;
-  top: -0.1em;
+  top: 0;
   @include mq(md) {
     width: 6.666666666666667vw;
   }
