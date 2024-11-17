@@ -6,8 +6,6 @@ layout > vertical-dots
 ------------------------------
 */
 
-
-
 .vertical-dots {
   cursor: pointer;
   border: none;
@@ -16,17 +14,19 @@ layout > vertical-dots
   position: relative;
   width: 0.5555555555555556vw;
   height: 40px;
-
   @include mq(xl) {
     margin-right: auto;
   }
-
   @include mq(md) {
     width: 4px;
     height: 20px;
     padding-right: 5.555555555555555vw;
     padding-left: clamp(20px, 5.556%, 80px);
   }
+}
+
+.vertical-dots--margin{
+  margin-top: 28px;
 }
 
 .vertical-dots .vertical-dots__item,

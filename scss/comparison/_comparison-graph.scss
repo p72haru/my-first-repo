@@ -25,8 +25,8 @@ comparison > comparison-graph
 }
 
 .comparison-graph__inner {
-  padding-left: 24px;
-  padding-top: 22px;
+  padding-left: 20px;
+  padding-top: 20px;
   @include mq(md) {
     max-width: 433px;
     padding-left: 0;

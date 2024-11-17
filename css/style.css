@@ -13,7 +13,7 @@ layout > decoration
 }
 
 .highlight--sub {
-  display: inline;
+  display: inline-block;
   color: var(--main-color);
   background-color: var(--accent-color);
   width: fit-content;
@@ -50,7 +50,7 @@ layout > decoration
   margin-right: 16px;
   margin-left: 16px;
   position: relative;
-  top: -0.1em;
+  top: 0;
 }
 @media screen and (max-width: 960px) {
   .line {
@@ -235,6 +235,7 @@ layout > arrow
   height: 19px;
   margin-right: 28px;
   margin-left: 28px;
+  margin-top: 8px;
 }
 @media screen and (max-width: 960px) {
   .arrow {
@@ -362,7 +363,7 @@ layout > card
 }
 
 .card__title span + span {
-  display: inline;
+  display: inline-block;
   background-color: var(--sub-color);
   padding-left: clamp(20px, 2.7778vw, 40px);
   padding-right: clamp(4px, 0.5555555556vw, 8px);
@@ -556,6 +557,7 @@ layout > cta-long-long
 @media screen and (max-width: 960px) {
   .cta-long__remaining p {
     font-size: 13px;
+    padding-left: 0;
   }
 }
 
@@ -577,11 +579,20 @@ layout > cta-long-long
 @media screen and (max-width: 960px) {
   .cta-long__application {
     font-size: 20px;
+    margin-top: 4px;
   }
 }
 
 .cta-long__image-wrap {
   display: flex;
+}
+
+.cta-long .cta__image-wrap--pc {
+  margin-left: 0;
+}
+
+.cta-long .cta__image-wrap--mb {
+  margin-right: 16px;
 }
 
 .cta-long__image {
@@ -636,7 +647,6 @@ layout > cta
   align-items: center;
   width: 100%;
   max-width: 360px;
-  max-height: 215px;
   padding-top: 24px;
   padding-bottom: 32px;
   z-index: 5;
@@ -644,7 +654,6 @@ layout > cta
 @media screen and (max-width: 960px) {
   .cta-small__link {
     max-width: 100%;
-    max-height: 203px;
     margin-left: auto;
   }
 }
@@ -700,7 +709,7 @@ layout > cta
   max-width: 160px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 4px;
+  padding-left: 8px;
 }
 @media screen and (max-width: 960px) {
   .cta-small__remaining {
@@ -716,7 +725,7 @@ layout > cta
   position: absolute;
   top: clamp(2px, 0.6944444444vw, 10px);
   top: 10px;
-  left: -4px;
+  left: 0px;
   width: 4px;
   height: 4px;
   background-color: var(--main-color);
@@ -748,6 +757,7 @@ layout > cta
   display: flex;
   margin-top: 16px;
   justify-content: center;
+  margin-right: 18px;
 }
 @media screen and (max-width: 960px) {
   .cta-small__image-wrap {
@@ -776,15 +786,20 @@ layout > flowing-main
 }
 
 .flowing-main__text {
-  font-size: clamp(20px, 2.2222222222vw, 36px);
+  display: flex;
+  align-items: center;
+  font-size: clamp(20px, 2.2222222222vw, 32px);
   color: #333333;
   white-space: nowrap;
   flex-shrink: 0;
   animation: loop-slide 20s infinite linear;
+  margin-top: 24px;
+  height: 93px;
 }
 @media screen and (max-width: 960px) {
   .flowing-main__text {
     margin-top: 32px;
+    height: auto;
   }
 }
 
@@ -951,6 +966,7 @@ layout > title
   .title__text {
     margin-top: 4px;
     font-size: 32px;
+    line-height: 1.375;
   }
 }
 @media screen and (max-width: 359px) {
@@ -989,6 +1005,10 @@ layout > vertical-dots
     padding-right: 5.5555555556vw;
     padding-left: clamp(20px, 5.556%, 80px);
   }
+}
+
+.vertical-dots--margin {
+  margin-top: 28px;
 }
 
 .vertical-dots .vertical-dots__item,
@@ -1148,26 +1168,6 @@ intro > intro
     margin-top: 0;
     padding-left: 0;
     padding-right: 0;
-  }
-}
-
-.flowing-main {
-  overflow: hidden;
-  display: flex;
-  width: 100vw;
-  margin-inline: calc(50% - 50vw);
-}
-
-.flowing-main__text {
-  font-size: clamp(20px, 2.2222222222vw, 32px);
-  color: #333333;
-  white-space: nowrap;
-  flex-shrink: 0;
-  animation: loop-slide 20s infinite linear;
-}
-@media screen and (max-width: 960px) {
-  .flowing-main__text {
-    margin-top: 32px;
   }
 }
 
@@ -1624,6 +1624,10 @@ feature > feature
   }
 }
 
+.feature .card__title-main {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 @media screen and (max-width: 960px) {
   .feature .card__title-main {
     height: 29px;
@@ -1632,8 +1636,12 @@ feature > feature
   }
 }
 
+.feature .card__title span {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 @media screen and (max-width: 960px) {
-  .feature card__title {
+  .feature .card__title span {
     height: 29px;
     padding-top: 0;
     padding-bottom: 0;
@@ -1717,7 +1725,7 @@ course > course
 }
 
 .course__plan {
-  margin-top: 48px;
+  margin-top: 42px;
 }
 @media screen and (max-width: 960px) {
   .course__plan {
@@ -1997,7 +2005,7 @@ course > course
   display: flex;
   font-size: clamp(14px, 1.1111111111vw, 16px);
   border-top: 1px dashed var(--sub-color);
-  margin-top: 40px;
+  margin-top: 36px;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: clamp(20px, 2.7777777778vw, 40px);
@@ -2043,7 +2051,7 @@ service > service
 }
 @media screen and (max-width: 960px) {
   .service {
-    margin-top: 80px;
+    margin-top: 62px;
   }
 }
 
@@ -2379,8 +2387,8 @@ comparison > comparison
 }
 
 .comparison__inner {
-  padding-top: 148px;
-  padding-bottom: 128px;
+  padding-top: 144px;
+  padding-bottom: 116px;
 }
 @media screen and (max-width: 960px) {
   .comparison__inner {
@@ -2604,8 +2612,8 @@ comparison > comparison-graph
 }
 
 .comparison-graph__inner {
-  padding-left: 24px;
-  padding-top: 22px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 960px) {
   .comparison-graph__inner {
@@ -2923,6 +2931,7 @@ testimonial > voices
     margin-right: 20px;
     max-width: 320px;
     min-width: 320px;
+    min-height: 470px;
   }
 }
 @media screen and (max-width: 359px) {

@@ -100,7 +100,7 @@ layout > card
   }
 }
 .card__title span + span {
-  display: inline;
+  display: inline-block;
   background-color: var(--sub-color);
   padding-left: clamp(20px, 2.7778vw, 40px);
   padding-right: clamp(4px, 0.5555555555555556vw, 8px);

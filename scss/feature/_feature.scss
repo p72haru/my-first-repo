@@ -27,13 +27,17 @@ feature > feature
 }
 
 .feature .card__title-main {
+  padding-top: 4px;
+  padding-bottom: 4px;
   @include mq(md) {
     height: 29px;
     padding-top: 0;
     padding-bottom: 0;
   }
 }
-.feature card__title {
+.feature .card__title span {
+  padding-top: 4px;
+  padding-bottom: 4px;
   @include mq(md) {
     height: 29px;
     padding-top: 0;
