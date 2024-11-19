@@ -1,0 +1,27 @@
+@use "../layout/breakpoint" as *;
+
+/*!
+block > flowing-text
+
+------------------------------
+*/
+.flowing-text {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  height: 100%;
+  overflow: hidden;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.flowing-text__item {
+  font-size: clamp(8px, 0.8333333333333334vw, 12px);
+  color: #646464;
+  z-index: 10;
+  white-space: nowrap;
+  animation: scroll-vertical 15s linear infinite;
+  will-change: transform;
+}

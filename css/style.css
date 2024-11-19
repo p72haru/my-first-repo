@@ -154,6 +154,15 @@ layout > animation
     transform: translateX(-100%);
   }
 }
+/* vertical-flowing */
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 @keyframes blinking {
   0% {
     opacity: 0;
@@ -168,6 +177,11 @@ layout > animation
 
 :root {
   --transition: all 0.4s;
+}
+
+:root {
+  --scroll-duration: 10s;
+  --scroll-direction: normal;
 }
 
 /*!
@@ -1062,6 +1076,32 @@ layout > vertical-dots
 }
 
 /*!
+block > flowing-text
+
+------------------------------
+*/
+.flowing-text {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  height: 100%;
+  overflow: hidden;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.flowing-text__item {
+  font-size: clamp(8px, 0.8333333333vw, 12px);
+  color: #646464;
+  z-index: 10;
+  white-space: nowrap;
+  animation: scroll-vertical 15s linear infinite;
+  will-change: transform;
+}
+
+/*!
 header > header
 
 ------------------------------
@@ -1582,19 +1622,6 @@ about > about
   .about__text:nth-child(odd) p:nth-child(n+2) {
     margin-top: 16px;
   }
-}
-
-.about__flowing-text {
-  font-size: clamp(8px, 0.8333333333vw, 12px);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-wrap: nowrap;
-  overflow: hidden;
-  color: #646464;
-  z-index: 10;
 }
 
 /*!

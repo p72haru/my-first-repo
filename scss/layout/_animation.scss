@@ -46,6 +46,16 @@ layout > animation
   }
 }
 
+/* vertical-flowing */
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 // blinking
 @keyframes blinking {
   0% {
@@ -64,3 +74,8 @@ layout > animation
 :root {
   --transition: all 0.4s;
 }
+
+:root {
+  --scroll-duration: 10s;
+  --scroll-direction: normal;
+}  
