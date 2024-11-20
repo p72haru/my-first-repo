@@ -82,6 +82,13 @@ cta > cta
   }
 }
 
+@-moz-document url-prefix() {
+  /* Firefox専用のスタイル */
+  .cta__contents-inner {
+    max-width: clamp(352px, 36.388888888888886vw, 524px);
+  }
+}
+
 .cta .cta__remaining {
   display: flex;
   position: relative;
@@ -152,6 +159,12 @@ cta > cta
   @include mq(md) {
     font-size: 20px;
     margin-top: 4px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .cta__application {
+    text-wrap: nowrap;
   }
 }
 

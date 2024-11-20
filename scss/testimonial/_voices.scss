@@ -40,9 +40,14 @@ testimonial > voices
     margin-right: 20px;
     max-width: 320px;
     min-width: 320px;
-    min-height: 470px;
   }
   @include mq(sm) {
     min-width: 240px;
+  }
+}
+
+.voices__card-image img {
+  @include mq(md) {
+    height: 470px;
   }
 }

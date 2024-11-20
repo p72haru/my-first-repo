@@ -83,6 +83,9 @@ mentor > mentor
     padding-bottom: 24px;
     min-width: 320px;
   }
+  @include mq(sm){
+    min-width: 240px
+  }
 }
 
 .mentor .card__description--negi {
