@@ -10,7 +10,7 @@ intro > concerns
 
 .concerns {
   display: flex;
-  margin-top: 48px;
+  margin-top: 42px;
   @include mq(md) {
     flex-direction: column;
     margin-right: auto;
@@ -27,6 +27,10 @@ intro > concerns
     padding-right: 5.555555555555555vw;
     padding-left: 5.555555555555555vw;
   }
+}
+
+.margin--top{
+  margin-top: 8px;
 }
 
 .concerns__image img {
@@ -48,24 +52,18 @@ intro > concerns
     margin-top: 0;
     padding-left: 5.555555555555555vw;
     padding-right: 3.3333333333333335vw;
+    margin-left: 1px;
   }
 }
 .concerns__item {
   width: fit-content;
   color: var(--main-color);
   font-size: clamp(16px, 1.6666666666666667vw, 24px);
-  background-color: #181818;
-  padding-top: clamp(2px, 0.2777777777777778vw, 4px);
-  padding-right: clamp(4px, 0.8333333333333334vw, 12px);
-  padding-left: clamp(4px, 0.8333333333333334vw, 12px);
-  padding-bottom: clamp(2px, 0.2777777777777778vw, 4px);
+
   line-height: 1.4589;
   margin-bottom: -1px;
   @include mq(sm) {
     font-size: clamp(14px, 1.6666666666666667vw, 20px);
-  }
-  @include mq(xl, min) {
-    border: 1px solid #181818;
   }
 }
 
@@ -74,5 +72,46 @@ intro > concerns
 }
 
 .concerns__item span {
-  display: inline;
+  display: inline-block;
+}
+
+.char-container {
+  display: inline-block;
+  position: relative;
+}
+
+.concerns__item span .char-container:first-of-type .char {
+  padding-left: clamp(4px, 0.8333333333333334vw, 12px);
+}
+.concerns__item span .char-container:last-of-type .char {
+  padding-right: clamp(4px, 0.8333333333333334vw, 12px);
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.05s;
+  position: relative;
+  z-index: 1;
+  background-color: #181818;
+  padding-top: clamp(2px, 0.2777777777777778vw, 4px);
+  padding-bottom: clamp(2px, 0.2777777777777778vw, 4px);
+  padding-left: 1px;
+  margin-left: -1px;
+  z-index: 10;
+}
+
+.char-bg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.05s;
+  @include mq(md) {
+    left: 0;
+  }
 }

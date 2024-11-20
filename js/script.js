@@ -52,3 +52,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// テキスト出現アニメーション
+(function() {
+  const concernsList = document.querySelector('.concerns__lists');
+  const items = document.querySelectorAll('.concerns__item span');
+  
+  function animateItems() {
+    let delay = 0;
+    
+    items.forEach((item) => {
+      const text = item.textContent;
+      item.textContent = '';
+      
+      for (let i = 0; i < text.length; i++) {
+        const charContainer = document.createElement('span');
+        charContainer.classList.add('char-container');
+        
+        const charBg = document.createElement('span');
+        charBg.classList.add('char-bg');
+        charBg.setAttribute('aria-hidden', 'true');
+        
+        const char = document.createElement('span');
+        char.textContent = text[i];
+        char.classList.add('char');
+        
+        charContainer.appendChild(charBg);
+        charContainer.appendChild(char);
+        item.appendChild(charContainer);
+        
+        setTimeout(() => {
+          charBg.style.transform = 'scaleX(1)';
+          char.style.opacity = '1';
+        }, delay);
+        
+        delay += 50; // 各文字の表示間隔
+      }
+      
+      delay += 200; // 次の行に移る前の待機時間
+    });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateItems();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0,
+    rootMargin: '10% 0px -40% 0px'
+  });
+
+  observer.observe(concernsList);
+})();
