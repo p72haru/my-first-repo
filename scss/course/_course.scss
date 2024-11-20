@@ -7,9 +7,9 @@ course > course
 */
 
 .course {
-  margin-top: 48px;
+  margin-top: 44px;
   @include mq(md) {
-    margin-top: 0;
+    margin-top: 4px;
   }
 }
 
@@ -211,13 +211,14 @@ course > course
   padding-top: 16px;
   padding-bottom: 16px;
   margin-top: 34px;
-  padding-left: clamp(20px, 2.7777777777777777vw, 40px);
+  padding-left: clamp(20px, 3.3333333333333335vw, 48px);
   @include mq(md) {
     font-size: 14px;
     line-height: 1.714;
+    padding-top: 20px;
     margin-top: 32px;
     padding-right: clamp(18px, 5.555555555555555vw, 20px);
-    padding-left: clamp(18px, 5.555555555555555vw, 20px);
+    padding-left: clamp(28px, 5.555555555555555vw, 28px);
   }
 }
 
@@ -231,8 +232,8 @@ course > course
   margin-bottom: -4px;
   animation: blinking 1s ease-in-out infinite alternate;
   @include mq(md) {
-    margin-left: -8px;
-    margin-bottom: -8px;
+    margin-left: -9px;
+    margin-bottom: -10px;
   }
 }
 

@@ -51,6 +51,21 @@ intro > support
   }
 }
 
+.support__item .highlight--sub {
+  margin-top: 8px;
+  @include mq(md) {
+    margin-top: 0px;
+  }
+}
+
+.support__item .position--top {
+  position: relative;
+  top: 8px;
+  @include mq(md) {
+    top: 0;
+  }
+}
+
 .support__image-wrapper {
   flex: 1;
   max-width: 280px;
