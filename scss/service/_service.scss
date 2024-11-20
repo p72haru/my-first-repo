@@ -66,19 +66,49 @@ service > service
   display: flex;
   flex-direction: column;
   margin-top: 8px;
+  min-height: 154px;
   @include mq(md) {
     margin-top: 4px;
+    min-height: 96px;
+  }
+}
+
+.service__list .char{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.service__list .highlight--main .char {
+  background-color: var(--main-color);
+}
+
+.service__list .highlight--main .char-container:last-of-type .char {
+  padding-right: 8px;
+  @include mq(md) {
+    padding-right: 4px;
+  }
+}
+.service__list .highlight--main .char-container:first-of-type .char {
+  padding-left: 8px;
+  @include mq(md) {
+    padding-left: 4px;
+  }
+}
+.service__list .highlight--sub .char-container:last-of-type .char {
+  padding-right: 8px;
+  @include mq(md) {
+    padding-right: 4px;
+  }
+}
+.service__list .highlight--sub .char-container:first-of-type .char {
+  padding-left: 8px;
+  @include mq(md) {
+    padding-left: 4px;
   }
 }
 
 .service__list li {
-  padding-right: 8px;
-  padding-left: 8px;
   margin-bottom: -1px;
-  @include mq(md) {
-    padding-right: 4px;
-    padding-left: 4px;
-  }
 }
 
 .service__text:nth-child(n + 2) {

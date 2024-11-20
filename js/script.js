@@ -53,57 +53,98 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// テキスト出現アニメーション
-(function() {
-  const concernsList = document.querySelector('.concerns__lists');
-  const items = document.querySelectorAll('.concerns__item span');
-  
-  function animateItems() {
-    let delay = 0;
-    
-    items.forEach((item) => {
-      const text = item.textContent;
-      item.textContent = '';
-      
-      for (let i = 0; i < text.length; i++) {
-        const charContainer = document.createElement('span');
-        charContainer.classList.add('char-container');
-        
-        const charBg = document.createElement('span');
-        charBg.classList.add('char-bg');
-        charBg.setAttribute('aria-hidden', 'true');
-        
-        const char = document.createElement('span');
-        char.textContent = text[i];
-        char.classList.add('char');
-        
-        charContainer.appendChild(charBg);
-        charContainer.appendChild(char);
-        item.appendChild(charContainer);
-        
-        setTimeout(() => {
-          charBg.style.transform = 'scaleX(1)';
-          char.style.opacity = '1';
-        }, delay);
-        
-        delay += 50; // 各文字の表示間隔
+// INTRO テキスト出現アニメーション
+(function () {
+  function createAnimatedText(text) {
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < text.length; i++) {
+      const charContainer = document.createElement("span");
+      charContainer.classList.add("char-container");
+
+      const charBg = document.createElement("span");
+      charBg.classList.add("char-bg");
+      charBg.setAttribute("aria-hidden", "true");
+
+      const char = document.createElement("span");
+      char.textContent = text[i];
+      char.classList.add("char");
+
+      charContainer.appendChild(charBg);
+      charContainer.appendChild(char);
+      fragment.appendChild(charContainer);
+    }
+
+    return fragment;
+  }
+
+  function animateText(element, delay = 0) {
+    return new Promise((resolve) => {
+      if (!element || element.dataset.animated === "true") {
+        resolve();
+        return;
       }
-      
-      delay += 200; // 次の行に移る前の待機時間
+
+      element.style.opacity = "1";
+
+      const originalText = element.textContent;
+      element.textContent = "";
+      element.appendChild(createAnimatedText(originalText));
+      element.dataset.animated = "true";
+
+      let charDelay = delay;
+      const chars = element.querySelectorAll(".char-container");
+      chars.forEach((charContainer) => {
+        const charBg = charContainer.querySelector(".char-bg");
+        const char = charContainer.querySelector(".char");
+        setTimeout(() => {
+          charBg.style.transform = "scaleX(1)";
+          char.style.opacity = "1";
+        }, charDelay);
+        charDelay += 30;
+      });
+
+      setTimeout(resolve, charDelay + 200);
     });
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateItems();
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0,
-    rootMargin: '10% 0px -40% 0px'
-  });
+  async function animateItems(parent) {
+    let childItems;
+    if (parent.classList.contains("concerns")) {
+      childItems = parent.querySelectorAll(".concerns__item span");
+    } else if (parent.classList.contains("about__catchphrase")) {
+      childItems = parent.querySelectorAll(".highlight--main, .highlight--sub");
+    } else {
+      childItems = parent.querySelectorAll(".highlight--sub.bold, .highlight--main, .highlight--sub");
+    }
 
-  observer.observe(concernsList);
+    let delay = 0;
+
+    for (const item of childItems) {
+      await animateText(item, delay);
+      delay += 30;
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateItems(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+      rootMargin: "10% 0px -40% 0px",
+    }
+  );
+
+  const targets = document.querySelectorAll(".about__catchphrase, .concerns, .service__list, .support__item");
+  targets.forEach((target) => {
+    if (target) {
+      observer.observe(target);
+    }
+  });
 })();

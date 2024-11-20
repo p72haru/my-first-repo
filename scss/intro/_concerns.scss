@@ -29,7 +29,7 @@ intro > concerns
   }
 }
 
-.margin--top{
+.margin--top {
   margin-top: 8px;
 }
 
@@ -92,7 +92,6 @@ intro > concerns
   opacity: 0;
   transition: opacity 0.05s;
   position: relative;
-  z-index: 1;
   background-color: #181818;
   padding-top: clamp(2px, 0.2777777777777778vw, 4px);
   padding-bottom: clamp(2px, 0.2777777777777778vw, 4px);
