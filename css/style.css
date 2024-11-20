@@ -954,11 +954,11 @@ layout > swiper
   border: 1px solid var(--main-color);
 }
 
-.swiper-slide:nth-child(n+2) {
+.swiper-slide:nth-child(n + 2) {
   border-left: none;
 }
 @media screen and (max-width: 960px) {
-  .swiper-slide:nth-child(n+2) {
+  .swiper-slide:nth-child(n + 2) {
     border-left: 1px solid var(--main-color);
   }
 }
@@ -1316,8 +1316,9 @@ intro > concerns
     gap: 0px;
     margin-top: 0;
     padding-left: 5.5555555556vw;
-    padding-right: 3.3333333333vw;
+    padding-right: 2.7777777777777777vw;
     margin-left: 1px;
+    min-height: 132px;
   }
 }
 
@@ -1427,11 +1428,11 @@ intro > support
   }
 }
 
-.support__contents .support__item:nth-child(n+2) {
+.support__contents .support__item:nth-child(n + 2) {
   margin-top: 40px;
 }
 @media screen and (max-width: 960px) {
-  .support__contents .support__item:nth-child(n+2) {
+  .support__contents .support__item:nth-child(n + 2) {
     margin-top: 24px;
   }
 }
@@ -1738,11 +1739,11 @@ about > about
   }
 }
 
-.about__text:nth-child(odd) p:nth-child(n+2) {
+.about__text:nth-child(odd) p:nth-child(n + 2) {
   margin-top: 20px;
 }
 @media screen and (max-width: 960px) {
-  .about__text:nth-child(odd) p:nth-child(n+2) {
+  .about__text:nth-child(odd) p:nth-child(n + 2) {
     margin-top: 16px;
   }
 }
@@ -2322,11 +2323,11 @@ service > service
   margin-bottom: -1px;
 }
 
-.service__text:nth-child(n+2) {
+.service__text:nth-child(n + 2) {
   margin-top: 44px;
 }
 @media screen and (max-width: 960px) {
-  .service__text:nth-child(n+2) {
+  .service__text:nth-child(n + 2) {
     margin-top: 24px;
   }
 }
@@ -2493,7 +2494,7 @@ mentor > mentor
   }
 }
 
-.career__item:nth-child(n+2) {
+.career__item:nth-child(n + 2) {
   margin-top: 12px;
 }
 
@@ -3050,11 +3051,11 @@ testimonial > testimonial
     scrollbar-color: var(--main-color) #474747 !important;
   }
 }
-.card__texts .testimonial__section:nth-child(n+2) {
+.card__texts .testimonial__section:nth-child(n + 2) {
   margin-top: 20px;
 }
 @media screen and (max-width: 960px) {
-  .card__texts .testimonial__section:nth-child(n+2) {
+  .card__texts .testimonial__section:nth-child(n + 2) {
     margin-top: 12px;
   }
 }
@@ -3614,16 +3615,16 @@ faq > faq
 }
 
 @media screen and (max-width: 960px) {
-  .faq__column:nth-child(n+2) {
+  .faq__column:nth-child(n + 2) {
     margin-top: -1px;
   }
 }
 
-.faq__column:nth-child(n+2) .faq__item {
+.faq__column:nth-child(n + 2) .faq__item {
   margin-left: -1px;
 }
 @media screen and (max-width: 960px) {
-  .faq__column:nth-child(n+2) .faq__item {
+  .faq__column:nth-child(n + 2) .faq__item {
     margin-left: 0;
   }
 }
@@ -3749,7 +3750,7 @@ faq > faq
   transform: translateY(2px) rotate(-135deg) skew(-3deg, -3deg);
 }
 
-.faq__item:nth-child(n+2) {
+.faq__item:nth-child(n + 2) {
   border-top: none;
 }
 
