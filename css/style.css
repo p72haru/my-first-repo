@@ -1248,7 +1248,7 @@ intro > concerns
 */
 .concerns {
   display: flex;
-  margin-top: 48px;
+  margin-top: 42px;
 }
 @media screen and (max-width: 960px) {
   .concerns {
@@ -1269,6 +1269,10 @@ intro > concerns
     padding-right: 5.5555555556vw;
     padding-left: 5.5555555556vw;
   }
+}
+
+.margin--top {
+  margin-top: 8px;
 }
 
 .concerns__image img {
@@ -1295,6 +1299,7 @@ intro > concerns
     margin-top: 0;
     padding-left: 5.5555555556vw;
     padding-right: 3.3333333333vw;
+    margin-left: 1px;
   }
 }
 
@@ -1302,11 +1307,6 @@ intro > concerns
   width: fit-content;
   color: var(--main-color);
   font-size: clamp(16px, 1.6666666667vw, 24px);
-  background-color: #181818;
-  padding-top: clamp(2px, 0.2777777778vw, 4px);
-  padding-right: clamp(4px, 0.8333333333vw, 12px);
-  padding-left: clamp(4px, 0.8333333333vw, 12px);
-  padding-bottom: clamp(2px, 0.2777777778vw, 4px);
   line-height: 1.4589;
   margin-bottom: -1px;
 }
@@ -1315,18 +1315,57 @@ intro > concerns
     font-size: clamp(14px, 1.6666666667vw, 20px);
   }
 }
-@media screen and (min-width: 1441px) {
-  .concerns__item {
-    border: 1px solid #181818;
-  }
-}
 
 .concerns__item:last-child {
   margin-bottom: 0;
 }
 
 .concerns__item span {
-  display: inline;
+  display: inline-block;
+}
+
+.char-container {
+  display: inline-block;
+  position: relative;
+}
+
+.concerns__item span .char-container:first-of-type .char {
+  padding-left: clamp(4px, 0.8333333333vw, 12px);
+}
+
+.concerns__item span .char-container:last-of-type .char {
+  padding-right: clamp(4px, 0.8333333333vw, 12px);
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.05s;
+  position: relative;
+  z-index: 1;
+  background-color: #181818;
+  padding-top: clamp(2px, 0.2777777778vw, 4px);
+  padding-bottom: clamp(2px, 0.2777777778vw, 4px);
+  padding-left: 1px;
+  margin-left: -1px;
+  z-index: 10;
+}
+
+.char-bg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.05s;
+}
+@media screen and (max-width: 960px) {
+  .char-bg {
+    left: 0;
+  }
 }
 
 /*!
@@ -1386,6 +1425,25 @@ intro > support
 @media screen and (max-width: 960px) {
   .support__contents .support__item:nth-child(3) {
     margin-top: 24px;
+  }
+}
+
+.support__item .highlight--sub {
+  margin-top: 8px;
+}
+@media screen and (max-width: 960px) {
+  .support__item .highlight--sub {
+    margin-top: 0px;
+  }
+}
+
+.support__item .position--top {
+  position: relative;
+  top: 8px;
+}
+@media screen and (max-width: 960px) {
+  .support__item .position--top {
+    top: 0;
   }
 }
 
@@ -1634,7 +1692,7 @@ feature > feature
 }
 @media screen and (max-width: 960px) {
   .feature {
-    margin-top: 64px;
+    margin-top: 68px;
   }
 }
 
@@ -1677,6 +1735,8 @@ feature > feature
 
 .feature .card__title span + span {
   padding-top: 1px;
+  margin-top: -1px;
+  padding-bottom: 0;
 }
 
 /*!
@@ -1695,7 +1755,7 @@ flowing > flowing
 }
 @media screen and (max-width: 960px) {
   .flowing {
-    margin-top: 8px;
+    margin-top: 0px;
   }
 }
 
@@ -1743,11 +1803,11 @@ course > course
 ------------------------------
 */
 .course {
-  margin-top: 48px;
+  margin-top: 44px;
 }
 @media screen and (max-width: 960px) {
   .course {
-    margin-top: 0;
+    margin-top: 4px;
   }
 }
 
@@ -1979,15 +2039,16 @@ course > course
   padding-top: 16px;
   padding-bottom: 16px;
   margin-top: 34px;
-  padding-left: clamp(20px, 2.7777777778vw, 40px);
+  padding-left: clamp(20px, 3.3333333333vw, 48px);
 }
 @media screen and (max-width: 960px) {
   .course__learning-note {
     font-size: 14px;
     line-height: 1.714;
+    padding-top: 20px;
     margin-top: 32px;
     padding-right: clamp(18px, 5.5555555556vw, 20px);
-    padding-left: clamp(18px, 5.5555555556vw, 20px);
+    padding-left: clamp(28px, 5.5555555556vw, 28px);
   }
 }
 
@@ -2003,8 +2064,8 @@ course > course
 }
 @media screen and (max-width: 960px) {
   .course__learning-note::before {
-    margin-left: -8px;
-    margin-bottom: -8px;
+    margin-left: -9px;
+    margin-bottom: -10px;
   }
 }
 
@@ -2158,7 +2219,7 @@ service > service
 }
 
 .service__text:nth-child(n+2) {
-  margin-top: 40px;
+  margin-top: 44px;
 }
 @media screen and (max-width: 960px) {
   .service__text:nth-child(n+2) {
@@ -2180,7 +2241,7 @@ mentor > mentor
 ------------------------------
 */
 .mentor {
-  margin-top: 144px;
+  margin-top: 138px;
 }
 @media screen and (max-width: 960px) {
   .mentor {
@@ -2426,7 +2487,7 @@ comparison > comparison
 }
 
 .comparison__contents {
-  margin-top: 49px;
+  margin-top: 42px;
   display: flex;
   gap: 20px;
 }
@@ -2730,7 +2791,7 @@ testimonial > testimonial
 }
 
 .testimonial__inner {
-  padding-top: 144px;
+  padding-top: 148px;
   padding-bottom: 120px;
 }
 @media screen and (max-width: 960px) {
